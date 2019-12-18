@@ -8,5 +8,5 @@ curl -sLo -u baalajimaestro:$GH_PERSONAL_TOKEN  ~/.ssh/id_ed25519 https://raw.gi
 chmod 600 ~/.ssh/id_ed25519
 for i in `ls ~/rpmbuild/RPMS/`
 do
-scp -r ~/rpmbuild/RPMS/$i baalaji20@storage.osdn.net:/storage/groups/b/ba/baalajimaestrobuilds/linux-clear/$i
+scp  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r ~/rpmbuild/RPMS/$i baalaji20@storage.osdn.net:/storage/groups/b/ba/baalajimaestrobuilds/linux-clear/$i
 done
