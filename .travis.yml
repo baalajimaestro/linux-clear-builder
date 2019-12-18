@@ -6,4 +6,5 @@ services:
   - docker
 
 script:
-  - docker build . -t baalajimaestro/linux-clear:latest
+  - docker build . -t ci
+  - docker run -it -e SSH_KEY=${SSH_KEY} ci
