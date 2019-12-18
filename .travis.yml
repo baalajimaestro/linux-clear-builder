@@ -1,0 +1,9 @@
+language: bash
+
+dist: bionic
+
+services:
+  - docker
+
+script:
+  - docker build . -t baalajimaestro/linux-clear:latest
