@@ -20,5 +20,6 @@ RUN useradd runner --create-home
 
 USER runner
 WORKDIR /home/runner
+COPY runner.sh /home/runner/runner.sh
 
 CMD ["bash", "runner.sh"]
