@@ -14,7 +14,7 @@ RUN zypper install -y git \
                       fdupes \
                       hmaccalc \
                       libelf-devel \
-                      modutils
+                      modutils > /dev/null
 
 RUN useradd runner --create-home
 
