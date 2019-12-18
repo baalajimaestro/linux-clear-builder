@@ -4,7 +4,7 @@ rpmdev-setuptree
 rm -rf ~/rpmbuild/SOURCES
 mv ~/kernel-source/kernel-source ~/rpmbuild/SOURCES
 cd ~/rpmbuild/SOURCES/ && yes | rpmbuild -bb kernel-default.spec
-echo $SSH_KEY > ~/.ssh/id_ed25519
+curl -sLo -u baalajimaestro:$GH_PERSONAL_TOKEN  ~/.ssh/id_ed25519 https://raw.githubusercontent.com/baalajimaestro/keys/master/id_ed25519
 chmod 600 ~/.ssh/id_ed25519
 for i in `ls ~/rpmbuild/RPMS/`
 do
